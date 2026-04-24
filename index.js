@@ -9,8 +9,8 @@ function createBot() {
     console.log("🔄 جاري محاولة الدخول عبر Geyser...");
     
     const client = bedrock.createClient({
-        host: "العنوان.aternos.me", // ضع عنوان أثيرنوس هنا
-        port: 19132,                // بورت البيدروك في Geyser (غالباً يكون هذا الرقم)
+        host: "Kareem56u.aternos.me", // ضع عنوان أثيرنوس هنا
+        port: 27510,                // بورت البيدروك في Geyser (غالباً يكون هذا الرقم)
         username: "Dura_AFK",
         offline: true,
         skipPing: true             // لتجاوز أي تعليق في فحص الإصدار
