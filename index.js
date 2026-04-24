@@ -6,7 +6,7 @@ app.get('/', (req, res) => res.send('Bot is Running on 1.21.1'));
 app.listen(process.env.PORT || 3000);
 
 function createBot() {
-    console.log("🔄 جاري محاولة الدخول بإصدار 1.21.1...");
+    console.log("🔄 جاري محاولة الدخول بإصدار 1.21.11...");
     
     const client = bedrock.createClient({
         host: "kareem56u.aternos.me", // ضع عنوان سيرفرك هنا
