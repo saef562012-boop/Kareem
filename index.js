@@ -2,22 +2,22 @@ const bedrock = require('bedrock-protocol');
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => res.send('Geyser Bot is Running!'));
+app.get('/', (req, res) => res.send('Bot is Running on 1.21.1'));
 app.listen(process.env.PORT || 3000);
 
 function createBot() {
-    console.log("🔄 جاري محاولة الدخول عبر Geyser...");
+    console.log("🔄 جاري محاولة الدخول بإصدار 1.21.1...");
     
     const client = bedrock.createClient({
-        host: "Kareem56u.aternos.me", // ضع عنوان أثيرنوس هنا
-        port: 27510,                // بورت البيدروك في Geyser (غالباً يكون هذا الرقم)
+        host: "kareem56u.aternos.me", // ضع عنوان سيرفرك هنا
+        port: 25710,                // تأكد من البورت في أثيرنوس
         username: "Dura_AFK",
         offline: true,
-        skipPing: true             // لتجاوز أي تعليق في فحص الإصدار
+        version: "1.21.11"           // قمنا بتحديد الإصدار بدقة هنا
     });
 
     client.on('spawn', () => {
-        console.log("✅ نجح الأمر! البوت دخل السيرفر عبر Geyser.");
+        console.log("✅ أخيراً! البوت دخل سيرفر أثيرنوس بنجاح.");
     });
 
     client.on('error', (err) => {
@@ -25,7 +25,6 @@ function createBot() {
     });
 
     client.on('close', () => {
-        console.log("🔄 انقطع الاتصال، سأحاول العودة بعد قليل...");
         setTimeout(createBot, 10000);
     });
 }
